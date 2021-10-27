@@ -3,7 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable/ic_print_black_24dp.xml" value="0.3807291666666667" />
+        <entry key="app/src/main/res/layout/activity_device_list.xml" value="0.3645833333333333" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/device_name.xml" value="0.22" />
       </map>
     </option>
   </component>

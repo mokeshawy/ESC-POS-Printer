@@ -2,9 +2,14 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.posprinter">
 
+    <uses-feature android:name="android.hardware.usb.host" />
+
+    <uses-permission android:name="android.permission.BLUETOOTH_SCAN" />
+    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
     <uses-permission android:name="android.permission.BLUETOOTH" />
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -12,6 +17,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.POSPrinter">
+        <activity
+            android:name=".DeviceListActivity"
+            android:exported="true" />
         <activity
             android:name=".MainActivity"
             android:exported="true">

@@ -13,40 +13,109 @@
         tools:context=".MainActivity">
 
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center"
+            android:id="@+id/layout"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
             android:orientation="vertical"
-            android:padding="5dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Hello Solarus..."
-                android:textSize="25dp"/>
-            <Button
-                android:id="@+id/btn_select_print_device"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Select Device !"
-                android:textAllCaps="false"
-                android:layout_marginTop="50dp"
-                tools:layout_editor_absoluteX="112dp"
-                tools:layout_editor_absoluteY="337dp" />
 
-            <Button
-                android:id="@+id/btn_print_menu"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:id="@+id/l2"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Print"
-                android:textAllCaps="false"
-                android:layout_marginTop="20dp"
-                tools:layout_editor_absoluteX="233dp"
-                tools:layout_editor_absoluteY="336dp" />
+                android:layout_weight="2"
+                android:gravity="bottom"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#000000"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:text="PRINTING DETAILS"
+                    android:textColor="#ffffff"
+                    android:textSize="30sp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#CFD8DC"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="5dp"
+                    android:text="Printer Status:"
+                    android:textColor="#000000"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/bpstatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#CFD8DC"
+                    android:gravity="end"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="Disconnected"
+                    android:textColor="@color/black"
+                    android:textSize="24sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/l1"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:weightSum="2">
+
+                <Button
+                    android:id="@+id/Scan"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="1dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/colorAccent"
+                    android:drawableStart="@drawable/ic_bluetooth_black_24dp"
+                    android:gravity="start|center_vertical"
+                    android:paddingStart="10dp"
+                    android:paddingTop="3dp"
+                    android:paddingEnd="34dp"
+                    android:paddingBottom="3dp"
+                    android:text="@string/connect"
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/mPrint"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="1dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/colorAccent"
+                    android:drawableStart="@drawable/ic_print_black_24dp"
+                    android:enabled="false"
+                    android:gravity="start|center_vertical"
+                    android:paddingStart="10dp"
+                    android:paddingTop="3dp"
+                    android:paddingEnd="34dp"
+                    android:paddingBottom="3dp"
+                    android:text="@string/print"
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
 
         </LinearLayout>
 
